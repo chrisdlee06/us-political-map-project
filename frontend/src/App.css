@@ -1,0 +1,51 @@
+/* ---------------------------------------------------------------------------
+   App.css
+
+   Styling for the App component specifically: the page heading and the card
+   that holds the map. Site-wide colours and fonts live in index.css.
+   --------------------------------------------------------------------------- */
+
+/* The outer <main> element. */
+.app {
+  /* Stop the layout stretching uncomfortably wide on large monitors, then
+     `margin: 0 auto` centres that limited width in the window. ("auto" tells
+     the browser to split the leftover space equally on both sides.) */
+  max-width: 1080px;
+  margin: 0 auto;
+
+  /* Breathing room: 32px above and below, 20px left and right. The side
+     padding also keeps the map off the screen edge on narrow phones. */
+  padding: 32px 20px;
+}
+
+.app-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 32px;
+  font-weight: 600;
+
+  /* Headings arrive with a large default margin; this trims it to just a
+     small gap below the title. */
+  margin: 0 0 8px;
+}
+
+.app-subtitle {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* The white panel the map sits inside. */
+.map-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 16px;
+
+  /* A soft shadow lifts the card slightly off the grey page background.
+     The four values are: horizontal offset, vertical offset, blur, colour. */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
